@@ -23,7 +23,9 @@
     "url-loader": "^2.1.0",
     "webpack": "^4.41.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "webpack-cli": "^3.3.9"
+  },
   "scripts": {
     "build": "webpack",
     "watch": "webpack --watch"
