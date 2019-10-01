@@ -1,6 +1,6 @@
 'use strict';
 
-var ExtractTextPlugin = require("extract-text-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 var path = require("path");
 
 module.exports = {
@@ -16,11 +16,16 @@ module.exports = {
         rules: [
             {
                 test: /\.scss$/,
-                use: ExtractTextPlugin.extract({
-                    fallback: "style-loader",
-                    use: ["css-loader", "sass-loader"],
-                    publicPath: "dist"
-                })
+                use: [
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                            publicPath: "./dist"
+                        }
+                    },
+                    "css-loader", 
+                    "sass-loader"
+                ]
             },
             {
                 test: /\.jsx?$/,
@@ -54,9 +59,8 @@ module.exports = {
         extensions: [".js", ".jsx"]
     },
     plugins: [
-        new ExtractTextPlugin({
-            filename: "style.css",
-            allChunks: true
+        new MiniCssExtractPlugin({
+            filename: 'style.css'
         })
     ]
 };
