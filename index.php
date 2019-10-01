@@ -22,6 +22,9 @@
     <body <?php body_class(); ?>>
         <div id="page" class="hfeed site">
             <div id="content">
+                <div class="loader-gif">
+                    <img src="<?php echo home_url() ?>/wp-content/themes/rachel-react-single/images/loader-ring-large.gif" alt="Loader">
+                </div>
             </div>
             <?php wp_footer(); ?>
         </div>			
