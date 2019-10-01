@@ -4,6 +4,7 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var path = require("path");
 
 module.exports = {
+    mode: 'development',
     entry: {
         app: "./src/index.jsx"
     },
@@ -23,13 +24,19 @@ module.exports = {
             },
             {
                 test: /\.jsx?$/,
-                exclude: /node_modules/,
-                use: "babel-loader"
+                exclude: /(node_modules|bower_components)/,
+                use: {
+                    loader: "babel-loader",
+                    options: {
+                        presets: ["@babel/preset-env", "@babel/preset-react"],
+                        plugins: ["@babel/plugin-proposal-class-properties"]
+                    }
+                }
             },
             {
                 test: /\.(jpe?g|png|gif|svg)$/i,
                 use: [
-                    "file-loader?name=[name].[ext]&outputPath=images/&publicPath=http//racheldotey.local/wp-content/themes/rachel-react-single/dist/images",
+                    "file-loader?name=[name].[ext]&outputPath=images/&publicPath=http://racheldotey.local/wp-content/themes/rachel-react-single/dist/images",
                     "image-webpack-loader"
                 ]
             },
