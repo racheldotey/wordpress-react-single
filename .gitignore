@@ -18,3 +18,10 @@ thumb
 sketch
 
 # End of https://www.gitignore.io/api/react
+
+
+
+############################
+## NOTICE DIST IS IGNORED ##
+############################
+dist
