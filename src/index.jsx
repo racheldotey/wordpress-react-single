@@ -3,6 +3,9 @@ import { render } from "react-dom";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import 'bootstrap/dist/css/bootstrap.css';
+// Import index styles which contains variables used in other style sheets
+import './index.scss';
+
 import Header from "./components/header/header";
 import Footer from "./components/footer/footer";
 import Posts from "./pages/blog/blog";

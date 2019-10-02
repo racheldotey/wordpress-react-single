@@ -1,0 +1,42 @@
+$color-blue: #70bdc2;
+$color-lightblue: #bfdddf;
+$color-darkblue: #0fa5b3;
+$color-darkerblue: #44828f;
+
+$color-lightgreen: #d0dec7;
+$color-darkgreen: #98b880;
+$color-green: #749559;
+
+$color-lightgrey: #f6f6f6;
+
+body {
+    background-color: #f6f6f6;
+    color: #212529;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+
+    a {
+        color: #749559;
+        text-decoration: none;
+        transition: .4s;
+
+        &:hover, &:active {
+            color: #3e9eb1;
+            text-decoration: none;
+            border-bottom: #3e9eb1 1px dashed;
+        }
+
+        &:visited {
+            color: #536b40;
+            text-decoration: none;
+        }
+
+        img {
+            &:hover, &:active, &:visited {
+                text-decoration: none;
+                border: none;
+            }
+        }
+    }
+}

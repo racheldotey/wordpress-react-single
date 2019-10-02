@@ -29,6 +29,7 @@ function rachel_scripts()
         'path' => $path,
         'URL' => array(
             'api' => esc_url_raw(get_rest_url(null, '/wp/v2/')),
+            'apitheme' => esc_url_raw(get_rest_url(null, '/rachel/v2/')),
             'root' => esc_url_raw($url),
         )
     ))));
