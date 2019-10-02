@@ -89,3 +89,17 @@ function rachel_published_date( $object, $field_name, $request ) {
 /* END: Add extra content to the API JSON output */
 
 
+if (!function_exists('rachel_register_menus')) :
+    // Add theme support for menus
+    function rachel_register_menus() {
+        register_nav_menus(
+            array(
+                'header-menu' => __('Header Menu'),
+                'footer-menu' => __('Footer Menu'),
+                'terms-menu' => __('Terms and Conditions Menu'),
+                'blog-menu' => __('Blog Menu')
+            )
+        );
+    }
+    add_action('init', 'rachel_register_menus');
+endif;
