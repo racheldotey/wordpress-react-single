@@ -1,6 +1,7 @@
 import React from "react";
 import PostList from "../../components/post-list/post-list";
 import LoadingIcon from "../../images/loader-ring-small.gif";
+import { Controller, Scene } from 'react-scrollmagic';
 
 import "./blog.scss";
 
@@ -26,9 +27,10 @@ class Blog extends React.Component {
     };
 
     // init ScrollMagic Controller
-    this.controller = new ScrollMagic.Controller();
+    //this.controller = new ScrollMagic.Controller();
 
     // build scene
+    /*
     const scene = new ScrollMagic.Scene({
       triggerElement: "#colophon",
       triggerHook: "onEnter"
@@ -39,6 +41,7 @@ class Blog extends React.Component {
           this.getMorePosts();
         }
       });
+      */
   }
 
   getMorePosts() {
@@ -79,6 +82,7 @@ class Blog extends React.Component {
 
   componentDidUpdate() {
     // use ScrollMagic for infinite scrolling
+    /*
     const FadeInController = new ScrollMagic.Controller();
     document
       .querySelectorAll(".posts-container .col-md-4.card-outer")
@@ -92,6 +96,7 @@ class Blog extends React.Component {
           .setClassToggle(item, "fade-in")
           .addTo(FadeInController);
       });
+      */
   }
 
   render() {
