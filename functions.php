@@ -8,6 +8,7 @@
  */
 
 require_once dirname(__FILE__) . '/lib/api-functions-posts.php';
+require_once dirname(__FILE__) . '/lib/api-functions-menus.php';
 
 /* Enqueue styles and scripts */
 function rachel_scripts()
