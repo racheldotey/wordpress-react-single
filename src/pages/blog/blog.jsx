@@ -4,7 +4,7 @@ import LoadingIcon from "../../images/loader-ring-small.gif";
 
 import "./blog.scss";
 
-class Posts extends React.Component {
+class Blog extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -109,4 +109,4 @@ class Posts extends React.Component {
   }
 }
 
-export default Posts;
+export default Blog;
