@@ -39,7 +39,7 @@ module.exports = {
                 }
             },
             {
-                test: /\.(jpe?g|png|gif|svg)$/i,
+                test: /\.(jpe?g|png|gif|svg|ico)$/i,
                 use: [
                     "file-loader?name=[name].[ext]&outputPath=images/&publicPath=http://racheldotey.local/wp-content/themes/rachel-react-single/dist/images",
                     "image-webpack-loader"

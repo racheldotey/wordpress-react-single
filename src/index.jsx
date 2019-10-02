@@ -9,6 +9,10 @@ import Post from "./pages/post/post";
 import Page from "./pages/page/page";
 import NotFound from "./pages/not-found/not-found";
 
+// Imported here so that Webpack will copy them to dist
+import Favicon from "./images/favicon.ico";
+import IndexLoader from "./images/loader-ring-large.gif";
+
 const App = () => (
   <div id="page-inner">
     <Header />
