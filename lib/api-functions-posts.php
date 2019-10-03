@@ -12,10 +12,10 @@ if (!defined('ABSPATH')) {
 }
 
 // If this function already exists something is wrong
-if (!function_exists('rachel_register_api_fields')) :
+if (!function_exists('rachel_register_post_api_fields')) :
 
     /* Add extra content to the API JSON output */
-    function rachel_register_api_fields() {
+    function rachel_register_post_api_fields() {
         // Add Author Name
         register_rest_field(
             'post',
@@ -71,6 +71,6 @@ if (!function_exists('rachel_register_api_fields')) :
     }
 
     // Add our improvement to the REST API Init
-    add_action('rest_api_init', 'rachel_register_api_fields');
+    add_action('rest_api_init', 'rachel_register_post_api_fields');
 
 endif;
