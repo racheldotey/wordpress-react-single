@@ -1,3 +1,64 @@
-header {
-    background-color: lawngreen;
+header.site-header {
+    background-color: #24292e;
+    color: #ffffff;
+
+    nav.navbar {
+        a.site-title {
+            transition: .4s;
+            color: #ffffff;
+            text-decoration: none;
+            border: none;
+
+            &:visited {
+                color: #ffffff;
+                text-decoration: none;
+                border: none;
+            }
+        
+            &:hover, &:active {
+                color: hsla(0,0%,100%,.75);
+                text-decoration: none;
+                border: none;
+            }
+        }
+
+        .site-nav {
+            float: right;
+
+            a.nav-link {
+                transition: .4s;
+                text-decoration: none;
+                border: none;
+                border-radius: 5px;
+                color: hsla(0,0%,100%,.75);
+
+                &:visited {
+                    color: hsla(0,0%,100%,.75);
+                    text-decoration: none;
+                    border: none;
+                }
+
+                &:hover, &:active {
+                    background-color: #3F4448;
+                    color: #ffffff;
+                    text-decoration: none;
+                    border: none;
+                }
+
+                // Current page
+                &.active {
+                    background-color: transparent;
+                    color: #ffffff;
+                    text-decoration: none;
+                    border: none;
+                    &:visited, &:hover, &:active {
+                        background-color: transparent;
+                        color: #ffffff;
+                        text-decoration: none;
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
 }
