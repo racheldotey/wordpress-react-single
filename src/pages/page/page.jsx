@@ -1,7 +1,7 @@
 import React from "react";
 import NotFound from "../not-found/not-found";
 
-import './page.scss';
+import "./page.scss";
 
 class Page extends React.Component {
   constructor(props) {
@@ -16,9 +16,31 @@ class Page extends React.Component {
   }
 
   fetchData = () => {
-    const url = window.location.href.split("/");
-    const slug = url.pop() || url.pop();
+    if (this.props.pageid) {
+      this.fetchByID(this.props.pageid);
+    } else if (this.props.pageslug) {
+      this.fetchBySlug(this.props.pageslug);
+    } else{
+      let url = window.location.href.split("/");
+      let slug = url.pop() || url.pop();
+      this.fetchBySlug(slug);
+    }
+  };
 
+  fetchByID = (id) => {
+    fetch(`${ThemeVariables.URL.api}pages/${id}`)
+      .then(response => {
+        if (!response.ok) {
+          throw Error(response.statusText);
+        }
+        return response.json();
+      })
+      .then(res => {
+        this.setState({ page: res });
+      });
+  };
+
+  fetchBySlug = (slug) => {
     fetch(`${ThemeVariables.URL.api}pages?slug=${slug}`)
       .then(response => {
         if (!response.ok) {

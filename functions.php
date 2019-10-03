@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The main functions file
  *
@@ -11,8 +12,7 @@ require_once dirname(__FILE__) . '/lib/api-functions-posts.php';
 require_once dirname(__FILE__) . '/lib/api-functions-menus.php';
 
 /* Enqueue styles and scripts */
-function rachel_scripts()
-{
+function rachel_scripts() {
 
     // Load our main stylesheet.
     wp_enqueue_style('rachel-style', get_template_directory_uri() . '/style.css');
@@ -30,8 +30,10 @@ function rachel_scripts()
         'URL' => array(
             'api' => esc_url_raw(get_rest_url(null, '/wp/v2/')),
             'apitheme' => esc_url_raw(get_rest_url(null, '/rachel/v2/')),
-            'root' => esc_url_raw($url),
-        )
+            'root' => esc_url_raw($url)
+        ),
+        'show_on_front' => get_option('show_on_front'), // 'posts' or 'page'
+        'page_on_front' => get_option('page_on_front') // ID if static page is set for front page
     ))));
 }
 add_action('wp_enqueue_scripts', 'rachel_scripts');

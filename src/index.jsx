@@ -8,7 +8,8 @@ import './index.scss';
 
 import Header from "./components/header/header";
 import Footer from "./components/footer/footer";
-import Posts from "./pages/blog/blog";
+import Blog from "./pages/blog/blog";
+import Home from "./pages/home/home";
 import Post from "./pages/post/post";
 import Page from "./pages/page/page";
 import NotFound from "./pages/not-found/not-found";
@@ -22,8 +23,9 @@ const App = () => (
     <Header />
     <main id="content">
       <Switch>
-        <Route exact path={ThemeVariables.path} component={Posts} />
-        <Route exact path={ThemeVariables.path + "posts/:slug"} component={Post} />
+        <Route exact path={ThemeVariables.path} component={Home} />
+        <Route exact path={ThemeVariables.path + "blog"} component={Blog} />
+        <Route exact path={ThemeVariables.path + "blog/:slug"} component={Post} />
         <Route exact path={ThemeVariables.path + ":slug"} component={Page} />
         <Route path="*" component={NotFound} />
       </Switch>
