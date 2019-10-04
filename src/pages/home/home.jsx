@@ -2,6 +2,8 @@ import React from "react";
 import Blog from "../blog/blog";
 import Page from "../page/page";
 
+import "./home.scss";
+
 class Home extends React.Component {
   renderBlog() {
     return <Blog />;
