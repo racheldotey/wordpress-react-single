@@ -56,16 +56,11 @@ class Page extends React.Component {
   renderPage() {
     if (this.state.page.title) {
       return (
-        <article className="card">
-          <div className="card-body">
-            <h4 className="card-title">{this.state.page.title.rendered}</h4>
-            <p
-              className="card-text"
-              dangerouslySetInnerHTML={{
-                __html: this.state.page.content.rendered
-              }}
-            />
+        <article className="page">
+          <div className="page-header">
+            <h1 className="page-title">{this.state.page.title.rendered}</h1>
           </div>
+          <div className="page-body" dangerouslySetInnerHTML={{__html: this.state.page.content.rendered}} />
         </article>
       );
     } else {
