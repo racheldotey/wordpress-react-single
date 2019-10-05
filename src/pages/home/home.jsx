@@ -14,7 +14,6 @@ class Home extends React.Component {
   }
 
   render() {
-    console.log("Home Router", ThemeVariables);
     return ThemeVariables.show_on_front === "posts"
       ? this.renderBlog()
       : this.renderPage(ThemeVariables.page_on_front);

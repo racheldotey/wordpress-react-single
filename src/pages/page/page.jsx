@@ -73,7 +73,6 @@ class Page extends React.Component {
   }
 
   render() {
-    console.log("this.state.page", this.state.page);
     return (
       <div className="container post-entry">
         {this.state.page ? this.renderPage() : this.renderEmpty()}
