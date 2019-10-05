@@ -54,7 +54,7 @@ if (!class_exists('rachel_add_api_menus')) :
 			$rev_items = array_reverse($menu_items);
 			$rev_menu = array();
 			$cache = array();
-            
+
 			foreach ($rev_items as $item) :
 
 				$formatted = array(
@@ -62,7 +62,7 @@ if (!class_exists('rachel_add_api_menus')) :
 					'order' => (int) $item->menu_order,
 					'parent' => abs($item->menu_item_parent),
 					'title' => $item->title,
-					'url' => $item->url,
+                    'url' => self::make_url_relative($item->url),
 					'target' => $item->target,
 					'classes' => implode(' ', $item->classes),
 					'type' => $item->object,
@@ -86,6 +86,14 @@ if (!class_exists('rachel_add_api_menus')) :
 			endforeach;
 
 			return array_reverse ($rev_menu);
+        }
+
+        private function make_url_relative($url) {
+            $root_url = home_url();
+            if (substr($url, 0, strlen($root_url)) == $root_url) {
+                $url = substr($url, strlen($root_url));
+            } 
+            return $url;
         }
     }
     
