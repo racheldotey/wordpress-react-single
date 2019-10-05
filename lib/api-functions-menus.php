@@ -14,16 +14,17 @@ if (!defined('ABSPATH')) {
 // If this function already exists something is wrong
 if (!class_exists('rachel_add_api_menus')) :
 
-    class rachel_add_api_menus {
+    class rachel_add_api_menus extends WP_REST_Controller {
 
         const THEME_API_NAMESPACE = 'rachel/v2';
+        const THEME_API_BASE = 'menus';
 
         public function register_routes() {
             /**
              * Registers REST API Route
              * GET /menu/menu_location_slug
              */
-            register_rest_route(self::THEME_API_NAMESPACE, '/menu/(?P<location>[a-zA-Z0-9_-]+)', array(
+            register_rest_route(self::THEME_API_NAMESPACE, '/' . self::THEME_API_BASE . '/(?P<location>[a-zA-Z0-9_-]+)', array(
                 array(
                     'methods' => WP_REST_Server::READABLE,
                     'callback' => array($this, 'get_menu_by_location_slug'),

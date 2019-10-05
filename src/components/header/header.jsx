@@ -29,7 +29,7 @@ class Header extends React.Component {
   }
 
   getHeaderMenu() {
-    fetch(ThemeVariables.URL.apitheme + "menu/header-menu")
+    fetch(ThemeVariables.URL.apitheme + "menus/header-menu")
       .then(res => res.json())
       .then(results => {
         this.setState({ headerMenu: results });
