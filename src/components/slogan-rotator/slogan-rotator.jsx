@@ -3,7 +3,6 @@ import React from "react";
 class SloganRotator extends React.Component {
   constructor(props) {
     super(props);
-    console.log(props);
 
     this.state = {
       class: props.className ? props.className : "slogan-rotator",
