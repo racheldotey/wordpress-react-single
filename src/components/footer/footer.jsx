@@ -182,14 +182,14 @@ class Footer extends React.Component {
               <div className="footer-copyright">
                 <p>
                   &copy; 2012-{new Date().getFullYear()}{" "}
-                  <Link to={ThemeVariables.URL.root}>
+                  <Link to="/#home">
                     {ThemeVariables.title}
                   </Link>{" "}
                   <br />
                   Powered By React.js
                 </p>
                 <p>
-                  <Link to={ThemeVariables.URL.root + "/policies"}>
+                  <Link to="/policies">
                     Website Policies
                   </Link>
                 </p>
