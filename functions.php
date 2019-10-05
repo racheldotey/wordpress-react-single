@@ -16,10 +16,10 @@ function rachel_scripts() {
 
     // Load our main stylesheet.
     wp_enqueue_style('rachel-style', get_template_directory_uri() . '/style.css');
-    wp_enqueue_style('rachel-style-dist', get_template_directory_uri() . '/dist/style.css');
+    wp_enqueue_style('rachel-style-dist', get_template_directory_uri() . '/lib/style.css');
 
     // Load scripts
-    wp_enqueue_script('rachel-script', get_template_directory_uri() . '/dist/app.js', array(), '1.0', true);
+    wp_enqueue_script('rachel-script', get_template_directory_uri() . '/lib/app.js', array(), '1.0', true);
 
     $url = trailingslashit(home_url());
     $path = trailingslashit(parse_url($url, PHP_URL_PATH));

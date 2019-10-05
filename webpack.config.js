@@ -9,7 +9,7 @@ module.exports = {
         app: "./src/index.jsx"
     },
     output: {
-        path: path.resolve(__dirname, "dist"),
+        path: path.resolve(__dirname, "lib"),
         filename: "[name].js"
     },
     module: {
@@ -20,7 +20,7 @@ module.exports = {
                     {
                         loader: MiniCssExtractPlugin.loader,
                         options: {
-                            publicPath: "./dist"
+                            publicPath: "./lib"
                         }
                     },
                     "css-loader", 
@@ -41,7 +41,7 @@ module.exports = {
             {
                 test: /\.(jpe?g|png|gif|svg|ico)$/i,
                 use: [
-                    "file-loader?name=[name].[ext]&outputPath=images/&publicPath=http://racheldotey.local/wp-content/themes/rachel-react-single/dist/images",
+                    "file-loader?name=[name].[ext]&outputPath=images/&publicPath=http://racheldotey.local/wp-content/themes/rachel-react-single/lib/images",
                     "image-webpack-loader"
                 ]
             },
