@@ -55,3 +55,64 @@ if (!function_exists('rachel_register_menus')) :
     }
     add_action('init', 'rachel_register_menus');
 endif;
+
+
+
+if (!function_exists('rachel_add_custom_sidebars')) :
+    // Register Sidebars
+    function rachel_add_custom_sidebars() {
+
+        register_sidebar(
+            array(
+                'id' => 'footer-sidebar',
+                'class' => 'footer-sidebar',
+                'name' => __('Footer Widget Area', 'rachel_react_single'),
+                'description' => __('Widget area to appear in the footer area.', 'rachel_react_single'),
+                'before_title' => '<h5 class="widget-title">',
+                'after_title' => '</h5>',
+                'before_widget' => '<li class="widget-container %s">',
+                'after_widget' => '</li>'
+            )
+        );
+
+        register_sidebar(
+            array(
+                'id' => 'blog-sidebar',
+                'class' => 'blog-sidebar',
+                'name' => __('Blog Sidebar', 'rachel_react_single'),
+                'description' => __('Sidebar widget area to appear in the blog section.', 'rachel_react_single'),
+                'before_title' => '<h5 class="widget-title">',
+                'after_title' => '</h5>',
+                'before_widget' => '<div class="widget-container %s">',
+                'after_widget' => '</div>'
+            )
+        );
+
+        register_sidebar(
+            array(
+                'id' => 'policy-sidebar',
+                'class' => 'policy-sidebar',
+                'name' => __('Policy Sidebar', 'rachel_react_single'),
+                'description' => __('Sidebar widget area to appear in the policy section.', 'rachel_react_single'),
+                'before_title' => '<h5 class="widget-title">',
+                'after_title' => '</h5>',
+                'before_widget' => '<div class="widget-container %s">',
+                'after_widget' => '</div>'
+            )
+        );
+
+        register_sidebar(
+            array(
+                'id' => 'not-found-sidebar',
+                'class' => 'not-found-sidebar',
+                'name' => __('Page Not Found Sidebar', 'rachel_react_single'),
+                'description' => __('Sidebar widget area to appear on the 404 Page Not Found page.', 'rachel_react_single'),
+                'before_title' => '<h5 class="widget-title">',
+                'after_title' => '</h5>',
+                'before_widget' => '<div class="widget-container %s">',
+                'after_widget' => '</div>'
+            )
+        );
+    }
+    add_action('widgets_init', 'rachel_add_custom_sidebars');
+endif;
