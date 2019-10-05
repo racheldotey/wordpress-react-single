@@ -11,7 +11,7 @@ class SloganRotator extends React.Component {
       milliseconds: props.seconds ? (parseInt(props.seconds)*1000) : 3000,
       slogans: props.sloganArray
         ? props.sloganArray
-        : ["Slogan array not provided.", "Click me!", "Property slogan array not set."]
+        : ["Slogan array not provided", "Click me!", "Property slogan array not set"]
     };
   }
 
@@ -34,7 +34,6 @@ class SloganRotator extends React.Component {
   rotateSlogan = () => {
     let i = this.state.displayID+1;
     this.setState({displayID: (i >= this.state.slogans.length) ? 0 : i});
-    console.log(this.state);
   };
 
   sloganClickEvent = () => {
