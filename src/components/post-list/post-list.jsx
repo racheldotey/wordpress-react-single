@@ -10,10 +10,10 @@ class PostList extends React.Component {
   renderPosts() {
     return this.props.posts.map((post, i) => {
       return (
-        <article className="col-md-4 card-outer" key={i}>
+        <article className="col-sm-12 col-md-6 col-lg-4 card-outer" key={i}>
           <div className="card">
             <div className="img-outer">
-              <Link to={"posts/" + post.slug}>
+              <Link to={post.slug}>
                 <img
                   className="card-img-top"
                   src={
@@ -27,7 +27,7 @@ class PostList extends React.Component {
             </div>
             <div className="card-body">
               <h4 className="card-title">
-                <Link to={"posts/" + post.slug}>{post.title.rendered}</Link>
+                <Link to={post.slug}>{post.title.rendered}</Link>
               </h4>
               <p className="card-text">
                 <small className="text-muted">
@@ -54,7 +54,7 @@ class PostList extends React.Component {
     }
 
     return (
-      <div className="posts-container">
+      <div className="posts-container row">
         {this.props.posts.length ? this.renderPosts() : this.renderEmpty()}
       </div>
     );

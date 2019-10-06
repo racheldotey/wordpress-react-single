@@ -1,7 +1,7 @@
 import React from "react";
 import LoadingIcon from "../../images/loader-dotsbar-small.gif";
 
-import './post.scss';
+import "./post.scss";
 
 class Post extends React.Component {
   constructor(props) {
@@ -33,15 +33,17 @@ class Post extends React.Component {
 
   renderPosts() {
     return (
-      <article className="card">
-        <div className="card-body">
-          <h4 className="card-title">{this.state.post.title.rendered}</h4>
-          <p className="card-text">
+      <article className="post">
+        <div className="post-header">
+          <h1 className="post-title">{this.state.post.title.rendered}</h1>
+          <div className="post-meta">
             <small className="text-muted">
               {this.state.post.author_name} &ndash;{" "}
               {this.state.post.published_date}
             </small>
-          </p>
+          </div>
+        </div>
+        <div className="post-body">
           {this.state.post.featured_image_src ? (
             <img
               className="featured-image"
@@ -49,12 +51,12 @@ class Post extends React.Component {
               alt="featured image"
             />
           ) : null}
-          <p
+          <div
             className="card-text"
             dangerouslySetInnerHTML={{
               __html: this.state.post.content.rendered
             }}
-          />
+          ></div>
         </div>
       </article>
     );
