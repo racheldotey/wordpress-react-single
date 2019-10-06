@@ -49,7 +49,7 @@ class Header extends React.Component {
             <Navbar.Brand href={ThemeVariables.URL.root} className="site-title">
               {ThemeVariables.title}
             </Navbar.Brand>
-            <Nav className="mr-auto site-nav">
+            <Nav className="site-nav">
               {this.state.headerMenu.map(item => (
                 <Nav.Link href={item.url} key={item.ID}>
                   {item.title}
