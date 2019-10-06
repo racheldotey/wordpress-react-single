@@ -13,6 +13,7 @@ import './index.scss';
 
 import Header from "./components/header/header";
 import Footer from "./components/footer/footer";
+import ScrollToTop from "./components/scroll-to-top/scroll-to-top";
 import Blog from "./pages/blog/blog";
 import Home from "./pages/home/home";
 import Post from "./pages/post/post";
@@ -35,6 +36,7 @@ const App = () => (
         <Route path="*" component={NotFound} />
       </Switch>
     </main>
+    <ScrollToTop />
     <Footer />
   </div>
 );
