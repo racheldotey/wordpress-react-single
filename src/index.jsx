@@ -25,7 +25,7 @@ import Favicon from "./images/favicon.ico";
 import IndexLoader from "./images/loader-ring-large.gif";
 
 const App = () => (
-  <div id="page-inner">
+  <div id="page-inner" className="d-flex flex-column h-100">
     <Header />
     <main id="content">
       <Switch>

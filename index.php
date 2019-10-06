@@ -9,7 +9,7 @@
  ?>
  <!DOCTYPE html>
 
- <html <?php language_attributes(); ?> class="no-js">
+ <html <?php language_attributes(); ?> class="h-100">
     <head>
         <meta charset="<?php bloginfo( 'charset' ); ?>">
         <meta name="viewport" content="width=device-width">
@@ -19,16 +19,14 @@
         <title>DEV</title>
         <?php wp_head(); ?>
     </head>
-    <body <?php body_class(); ?>>
-        <div id="page">
-            <div id="content" style="width: 100%; text-align:center; position: absolute; top: 50%; transform: translateY(-50%);">
-                <div class="loader-gif" style="margin:auto;">
-                    <h3 style="margin-bottom:0;">One moment please...</h3>
-                    <img src="<?php echo home_url() ?>/wp-content/themes/rachel-react-single/lib/images/loader-ring-large.gif" alt="Loader">
-                    <h3 style="margin-top:0;">while we load something amazing!</h3>
-                </div>
+    <body <?php body_class("h-100"); ?> id="page">
+        <div id="content" style="width: 100%; text-align:center; position: absolute; top: 50%; transform: translateY(-50%);">
+            <div class="loader-gif" style="margin:auto;">
+                <h3 style="margin-bottom:0;">One moment please...</h3>
+                <img src="<?php echo home_url() ?>/wp-content/themes/rachel-react-single/lib/images/loader-ring-large.gif" alt="Loader">
+                <h3 style="margin-top:0;">while we load something amazing!</h3>
             </div>
-            <?php wp_footer(); ?>
-        </div>			
+        </div>
+        <?php wp_footer(); ?>		
     </body>
 </html>

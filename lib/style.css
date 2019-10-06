@@ -7966,6 +7966,10 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5; }
+  body #content {
+    background-color: #ffffff;
+    padding: 60px 30px;
+    margin: 60px 30px; }
   body a {
     color: #749559;
     text-decoration: none;
@@ -7983,8 +7987,7 @@ body {
 
 header.site-header {
   background-color: #24292e;
-  color: #ffffff;
-  margin: 0 0 50px 0; }
+  color: #ffffff; }
   header.site-header nav.navbar a.site-title {
     transition: .4s;
     color: #ffffff;
@@ -8027,7 +8030,6 @@ header.site-header {
           border: none; }
 
 footer#site-footer {
-  margin: 60px 0 0 0;
   padding: 120px 0 60px;
   background-color: #70bdc2;
   color: #ffffff;
@@ -8129,32 +8131,26 @@ div#scroll-to-top {
 
 
 
-article.page {
-  background-color: #ffffff;
-  padding: 50px 30px; }
-  article.page .page-header .page-title {
-    font-size: 34px;
-    font-size: 3.4rem;
-    font-weight: 900;
-    line-height: 1.12;
-    letter-spacing: -1.5px;
-    margin-bottom: 16px;
-    text-align: center;
-    display: block; }
+article.page .page-header .page-title {
+  font-size: 34px;
+  font-size: 3.4rem;
+  font-weight: 900;
+  line-height: 1.12;
+  letter-spacing: -1.5px;
+  margin-bottom: 16px;
+  text-align: center;
+  display: block; }
 
 body.home article .page-header {
   display: none; }
 
-article.post {
-  background-color: #ffffff;
-  padding: 50px 30px; }
-  article.post .post-header .post-title {
-    font-size: 34px;
-    font-size: 3.4rem;
-    font-weight: 900;
-    line-height: 1.12;
-    letter-spacing: -1.5px;
-    margin-bottom: 16px;
-    text-align: center;
-    display: block; }
+article.post .post-header .post-title {
+  font-size: 34px;
+  font-size: 3.4rem;
+  font-weight: 900;
+  line-height: 1.12;
+  letter-spacing: -1.5px;
+  margin-bottom: 16px;
+  text-align: center;
+  display: block; }
 

@@ -99,7 +99,7 @@ class Footer extends React.Component {
 
   render() {
     return (
-      <footer id="site-footer">
+      <footer id="site-footer" className="mt-auto">
         <div className="container">
           <div className="row">
             <div className="col-3">
