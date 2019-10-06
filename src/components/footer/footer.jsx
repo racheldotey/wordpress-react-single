@@ -182,16 +182,17 @@ class Footer extends React.Component {
               <div className="footer-copyright">
                 <p>
                   &copy; 2012-{new Date().getFullYear()}{" "}
-                  <Link to="/#home">
-                    {ThemeVariables.title}
-                  </Link>{" "}
-                  <br />
-                  Powered By React.js
+                  <Link to="/#home">{ThemeVariables.title}</Link> <br />
+                  <a
+                    href="https://github.com/racheldotey/rachel-react-single"
+                    target="_blank"
+                    alt="View this theme on GitHub. Fork it and make it your own!"
+                  >
+                    Theme Powered By React.js
+                  </a>
                 </p>
                 <p>
-                  <Link to="/policies">
-                    Website Policies
-                  </Link>
+                  <Link to="/policies">Website Policies</Link>
                 </p>
               </div>
             </div>
@@ -211,6 +212,7 @@ class Footer extends React.Component {
             </div>
           </div>
         </div>
+        
       </footer>
     );
   }
