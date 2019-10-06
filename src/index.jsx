@@ -1,6 +1,11 @@
 import React from "react";
 import { render } from "react-dom";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+
+// Import all brand icons
+library.add(fab);
 
 import 'bootstrap/dist/css/bootstrap.css';
 // Import index styles which contains variables used in other style sheets
