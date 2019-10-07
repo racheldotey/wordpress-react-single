@@ -3,11 +3,11 @@ header.site-header {
     color: #ffffff;
 
     nav.navbar {
-        a.site-title {
-            transition: .4s;
+        a.site-brand {
             color: #ffffff;
             text-decoration: none;
             border: none;
+            transition: .4s;
 
             &:visited {
                 color: #ffffff;
@@ -19,6 +19,25 @@ header.site-header {
                 color: hsla(0,0%,100%,.75);
                 text-decoration: none;
                 border: none;
+            }
+
+            .site-title {
+                font-family: 'Alegreya', serif;
+                font-weight: bold;
+                letter-spacing: .1rem;
+                font-size: 1.75rem;
+                line-height: 1em;
+                display: block;
+            }
+
+            .site-tagline {
+                font-family: 'Open Sans', sans-serif;
+                font-weight: normal;
+                letter-spacing: 0;
+                font-size: .8rem;
+                line-height: 1em;
+                padding-bottom: 0.5rem;
+                display: block;
             }
         }
 

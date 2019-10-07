@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Alegreya:400,700|Open+Sans:400,400i,700&display=swap');
+//font-family: 'Open Sans', sans-serif;
+//font-family: 'Alegreya', serif;
+
 $color-blue: #70bdc2;
 $color-lightblue: #bfdddf;
 $color-darkblue: #0fa5b3;
@@ -14,92 +18,104 @@ body {
     color: #212529;
     font-size: 1rem;
     font-weight: 400;
-    line-height: 1.5;
+    line-height: 1.7;
+    font-family: 'Open Sans', sans-serif;
 
     #content {
         background-color: #ffffff;
         padding: 60px 30px;
         margin: 60px 30px;
+    }
 
-        /* Link Styles */
-        a {
-            color: #749559;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: 'Alegreya', serif;
+        font-weight: bold;
+        letter-spacing: .1rem;
+    }
+
+    /* Link Styles */
+    a {
+        color: #749559;
+        text-decoration: none;
+        transition: .4s;
+
+        &:hover,
+        &:active {
+            color: #3e9eb1;
             text-decoration: none;
-            transition: .4s;
-
-            &:hover,
-            &:active {
-                color: #3e9eb1;
-                text-decoration: none;
-                border-bottom: #3e9eb1 1px dashed;
-            }
-
-            &:visited {
-                color: #536b40;
-                text-decoration: none;
-            }
-
-            img {
-
-                &:hover,
-                &:active,
-                &:visited {
-                    text-decoration: none;
-                    border: none;
-                }
-            }
+            border-bottom: #3e9eb1 1px dashed;
         }
 
-        /* Image styles in WordPress posts and pages */
-        img.alignleft,
-        a img.alignleft {
+        &:visited {
+            color: #536b40;
+            text-decoration: none;
+        }
+
+        img {
+
+            &:hover,
+            &:active,
+            &:visited {
+                text-decoration: none;
+                border: none;
+            }
+        }
+    }
+
+    /* Image styles in WordPress posts and pages */
+    img.alignleft,
+    a img.alignleft {
+        float: left;
+        margin: 0 1.5em 1.5em 0;
+    }
+
+    img.aligncenter,
+    a img.aligncenter {
+        display: block;
+        margin: 1.5em auto;
+    }
+
+    img.alignright,
+    a img.alignright {
+        float: right;
+        margin: 0 0 1.5em 1.5em;
+    }
+
+    .wp-caption {
+        text-align: center;
+
+        img {
+            margin: 0 auto;
+        }
+
+        &.alignleft {
             float: left;
             margin: 0 1.5em 1.5em 0;
         }
 
-        img.aligncenter,
-        a img.aligncenter {
+        &.aligncenter {
             display: block;
             margin: 1.5em auto;
         }
 
-        img.alignright,
-        a img.alignright {
+        &.alignright {
             float: right;
             margin: 0 0 1.5em 1.5em;
         }
 
-        .wp-caption {
+        p.wp-caption-text {
+            color: #45494d;
+            font-size: .8rem;
+            font-weight: 400;
+            line-height: 1.25;
+            font-style: italic;
             text-align: center;
-            
-            img {
-                margin: 0 auto;
-            }
-
-            &.alignleft {
-                float: left;
-                margin: 0 1.5em 1.5em 0;
-            }
-            
-            &.aligncenter {
-                display: block;
-                margin: 1.5em auto;
-            }
-            
-            &.alignright {
-                float: right;
-                margin: 0 0 1.5em 1.5em;
-            }
-            
-            p.wp-caption-text {
-                color: #45494d;
-                font-size: .8rem;
-                font-weight: 400;
-                line-height: 1.25;
-                font-style: italic;
-                text-align: center;
-                padding: 5px 0;
-            }
+            padding: 5px 0;
         }
     }
 }

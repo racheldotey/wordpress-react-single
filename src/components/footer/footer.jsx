@@ -131,6 +131,7 @@ class Footer extends React.Component {
                 </div>
 
                 <div className="col social-list">
+                  <p className="social-header">Lets be social</p>
                   <ul className="list-inline">
                     <li className="list-inline-item">
                       <a

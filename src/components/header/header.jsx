@@ -46,8 +46,9 @@ class Header extends React.Component {
       <header className="site-header" role="banner">
         <div className="container">
           <Navbar variant="dark">
-            <Navbar.Brand href={ThemeVariables.URL.root} className="site-title">
-              {ThemeVariables.title}
+            <Navbar.Brand href={ThemeVariables.URL.root} className="site-brand">
+              <span className="site-title" dangerouslySetInnerHTML={{ __html: ThemeVariables.title }}></span>
+              <span className="site-tagline" dangerouslySetInnerHTML={{ __html: ThemeVariables.tagline }}></span>
             </Navbar.Brand>
             <Nav className="site-nav">
               {this.state.headerMenu.map(item => (

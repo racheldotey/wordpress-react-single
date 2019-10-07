@@ -26,6 +26,7 @@ function rachel_scripts() {
 
     wp_scripts()->add_data('rachel-script', 'data', sprintf('var ThemeVariables = %s;', wp_json_encode(array(
         'title' => get_bloginfo('name', 'display'),
+        'tagline' => get_bloginfo('description', 'display'),
         'path' => $path,
         'URL' => array(
             'api' => esc_url_raw(get_rest_url(null, '/wp/v2/')),

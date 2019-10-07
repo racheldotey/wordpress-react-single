@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Alegreya:400,700|Open+Sans:400,400i,700&display=swap);
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -7965,77 +7966,102 @@ body {
   color: #212529;
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1.5; }
+  line-height: 1.7;
+  font-family: 'Open Sans', sans-serif;
+  /* Link Styles */
+  /* Image styles in WordPress posts and pages */ }
   body #content {
     background-color: #ffffff;
     padding: 60px 30px;
-    margin: 60px 30px;
-    /* Link Styles */
-    /* Image styles in WordPress posts and pages */ }
-    body #content a {
-      color: #749559;
+    margin: 60px 30px; }
+  body h1,
+  body h2,
+  body h3,
+  body h4,
+  body h5,
+  body h6 {
+    font-family: 'Alegreya', serif;
+    font-weight: bold;
+    letter-spacing: .1rem; }
+  body a {
+    color: #749559;
+    text-decoration: none;
+    transition: .4s; }
+    body a:hover, body a:active {
+      color: #3e9eb1;
       text-decoration: none;
-      transition: .4s; }
-      body #content a:hover, body #content a:active {
-        color: #3e9eb1;
-        text-decoration: none;
-        border-bottom: #3e9eb1 1px dashed; }
-      body #content a:visited {
-        color: #536b40;
-        text-decoration: none; }
-      body #content a img:hover, body #content a img:active, body #content a img:visited {
-        text-decoration: none;
-        border: none; }
-    body #content img.alignleft,
-    body #content a img.alignleft {
+      border-bottom: #3e9eb1 1px dashed; }
+    body a:visited {
+      color: #536b40;
+      text-decoration: none; }
+    body a img:hover, body a img:active, body a img:visited {
+      text-decoration: none;
+      border: none; }
+  body img.alignleft,
+  body a img.alignleft {
+    float: left;
+    margin: 0 1.5em 1.5em 0; }
+  body img.aligncenter,
+  body a img.aligncenter {
+    display: block;
+    margin: 1.5em auto; }
+  body img.alignright,
+  body a img.alignright {
+    float: right;
+    margin: 0 0 1.5em 1.5em; }
+  body .wp-caption {
+    text-align: center; }
+    body .wp-caption img {
+      margin: 0 auto; }
+    body .wp-caption.alignleft {
       float: left;
       margin: 0 1.5em 1.5em 0; }
-    body #content img.aligncenter,
-    body #content a img.aligncenter {
+    body .wp-caption.aligncenter {
       display: block;
       margin: 1.5em auto; }
-    body #content img.alignright,
-    body #content a img.alignright {
+    body .wp-caption.alignright {
       float: right;
       margin: 0 0 1.5em 1.5em; }
-    body #content .wp-caption {
-      text-align: center; }
-      body #content .wp-caption img {
-        margin: 0 auto; }
-      body #content .wp-caption.alignleft {
-        float: left;
-        margin: 0 1.5em 1.5em 0; }
-      body #content .wp-caption.aligncenter {
-        display: block;
-        margin: 1.5em auto; }
-      body #content .wp-caption.alignright {
-        float: right;
-        margin: 0 0 1.5em 1.5em; }
-      body #content .wp-caption p.wp-caption-text {
-        color: #45494d;
-        font-size: .8rem;
-        font-weight: 400;
-        line-height: 1.25;
-        font-style: italic;
-        text-align: center;
-        padding: 5px 0; }
+    body .wp-caption p.wp-caption-text {
+      color: #45494d;
+      font-size: .8rem;
+      font-weight: 400;
+      line-height: 1.25;
+      font-style: italic;
+      text-align: center;
+      padding: 5px 0; }
 
 header.site-header {
   background-color: #24292e;
   color: #ffffff; }
-  header.site-header nav.navbar a.site-title {
-    transition: .4s;
+  header.site-header nav.navbar a.site-brand {
     color: #ffffff;
     text-decoration: none;
-    border: none; }
-    header.site-header nav.navbar a.site-title:visited {
+    border: none;
+    transition: .4s; }
+    header.site-header nav.navbar a.site-brand:visited {
       color: #ffffff;
       text-decoration: none;
       border: none; }
-    header.site-header nav.navbar a.site-title:hover, header.site-header nav.navbar a.site-title:active {
+    header.site-header nav.navbar a.site-brand:hover, header.site-header nav.navbar a.site-brand:active {
       color: rgba(255, 255, 255, 0.75);
       text-decoration: none;
       border: none; }
+    header.site-header nav.navbar a.site-brand .site-title {
+      font-family: 'Alegreya', serif;
+      font-weight: bold;
+      letter-spacing: .1rem;
+      font-size: 1.75rem;
+      line-height: 1em;
+      display: block; }
+    header.site-header nav.navbar a.site-brand .site-tagline {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: normal;
+      letter-spacing: 0;
+      font-size: .8rem;
+      line-height: 1em;
+      padding-bottom: 0.5rem;
+      display: block; }
   header.site-header nav.navbar .site-nav {
     margin-left: auto; }
     header.site-header nav.navbar .site-nav a.nav-link {
@@ -8096,7 +8122,8 @@ footer#site-footer {
     font-size: 11px; }
   footer#site-footer .call-to-action {
     margin-bottom: 60px; }
-  footer#site-footer .contact-header {
+  footer#site-footer .contact-header,
+  footer#site-footer .social-header {
     letter-spacing: .1rem;
     opacity: .6; }
   footer#site-footer .contact-phone {
@@ -8105,14 +8132,12 @@ footer#site-footer {
   footer#site-footer .contact-email {
     letter-spacing: .1rem;
     margin: 0; }
-  footer#site-footer .social-list {
-    text-align: center; }
-    footer#site-footer .social-list ul li a:active, footer#site-footer .social-list ul li a:hover, footer#site-footer .social-list ul li a:visited, footer#site-footer .social-list ul li a:focus {
-      text-decoration: none;
-      border: none; }
-    footer#site-footer .social-list ul li a img {
-      height: 35px;
-      width: 35px; }
+  footer#site-footer .social-list ul li a:active, footer#site-footer .social-list ul li a:hover, footer#site-footer .social-list ul li a:visited, footer#site-footer .social-list ul li a:focus {
+    text-decoration: none;
+    border: none; }
+  footer#site-footer .social-list ul li a img {
+    height: 35px;
+    width: 35px; }
   footer#site-footer .footer-nav {
     margin-top: 90px; }
     footer#site-footer .footer-nav .list-inline-item:not(:last-child) {

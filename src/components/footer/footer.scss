@@ -48,7 +48,8 @@ footer#site-footer {
         margin-bottom: 60px;
     }
 
-    .contact-header {
+    .contact-header,
+    .social-header {
         letter-spacing: .1rem;
         opacity: .6;
     }
@@ -64,8 +65,6 @@ footer#site-footer {
     }
 
     .social-list {
-        text-align: center;
-
         ul li {
             a {
                 &:active,
