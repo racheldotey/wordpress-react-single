@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The main template file
  *
@@ -6,20 +7,23 @@
  * @subpackage React Single Page by Rachel
  * @since React Single Page by Rachel 1.0
  */
- ?>
- <!DOCTYPE html>
+?>
+<!DOCTYPE html>
 
- <html <?php language_attributes(); ?> class="h-100">
-    <head>
-        <meta charset="<?php bloginfo( 'charset' ); ?>">
-        <meta name="viewport" content="width=device-width">
-        <link rel="profile" href="http://gmpg.org/xfn/11">
-        <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-        <link rel="shortcut icon" href="<?php echo home_url() ?>/wp-content/themes/rachel-react-single/lib/images/favicon.ico" type="image/x-icon">
-        <title>DEV</title>
-        <?php wp_head(); ?>
-    </head>
-    <body <?php body_class("h-100"); ?> id="page">
+<html <?php language_attributes(); ?> class="h-100">
+
+<head>
+    <meta charset="<?php bloginfo('charset'); ?>">
+    <meta name="viewport" content="width=device-width">
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+    <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
+    <link rel="shortcut icon" href="<?php echo home_url() ?>/wp-content/themes/rachel-react-single/lib/images/favicon.ico" type="image/x-icon">
+    <title>DEV</title>
+    <?php wp_head(); ?>
+</head>
+
+<body <?php body_class("h-100"); ?>>
+    <div id="page">
         <div id="content" style="width: 100%; text-align:center; position: absolute; top: 50%; transform: translateY(-50%);">
             <div class="loader-gif" style="margin:auto;">
                 <h3 style="margin-bottom:0;">One moment please...</h3>
@@ -27,6 +31,8 @@
                 <h3 style="margin-top:0;">while we load something amazing!</h3>
             </div>
         </div>
-        <?php wp_footer(); ?>		
-    </body>
+    </div>
+    <?php wp_footer(); ?>
+</body>
+
 </html>
