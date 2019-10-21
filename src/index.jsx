@@ -1,6 +1,7 @@
 import React from "react";
 import { render } from "react-dom";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Router, Route, Switch, Link } from "react-router-dom";
+import { createBrowserHistory } from "history";
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 
@@ -24,26 +25,44 @@ import NotFound from "./pages/not-found/not-found";
 import Favicon from "./images/favicon.ico";
 import IndexLoader from "./images/loader-ring-large.gif";
 
-const App = () => (
-  <div id="page-inner" className="d-flex flex-column h-100">
-    <Header />
-    <main id="content">
-      <Switch>
-        <Route exact path={ThemeVariables.path} component={Home} />
-        <Route exact path={ThemeVariables.path + "blog"} component={Blog} />
-        <Route exact path={ThemeVariables.path + "blog/:slug"} component={Post} />
-        <Route exact path={ThemeVariables.path + ":slug"} component={Page} />
-        <Route path="*" component={NotFound} />
-      </Switch>
-    </main>
-    <ScrollToTop />
-    <Footer />
-  </div>
-);
+// Browser history
+const history = createBrowserHistory();
+/*
+history.listen((location, action) => {
+  console.log("INDEX.jsx history.listen location.hash = ", location.hash);
+});
+*/
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+  };
+
+  render() {
+    return (
+      <div id="page-inner" className="d-flex flex-column h-100">
+        <Header />
+        <main id="content">
+        <Link to="#top">#bottom</Link>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/blog" component={Blog} />
+            <Route exact path="/blog/:slug" component={Post} />
+            <Route exact path="/:slug" component={Page} />
+            <Route path="*" component={NotFound} />
+          </Switch>
+        <Link to="#bottom">#bottom</Link>
+        </main>
+        <Footer />
+        <ScrollToTop />
+      </div>
+    );
+  };
+}
 
 // Routes
 const routes = (
-  <Router>
+  <Router history={history}>
     <Route path="/" component={App} />
   </Router>
 );
