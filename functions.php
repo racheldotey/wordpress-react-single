@@ -7,6 +7,7 @@
  * @since React Single Page by Rachel 1.0
  */
 
+require_once dirname(__FILE__) . '/lib/php/add-react-shortcodes.php';
 require_once dirname(__FILE__) . '/lib/php/api-functions-posts.php';
 require_once dirname(__FILE__) . '/lib/php/api-functions-menus.php';
 require_once dirname(__FILE__) . '/lib/php/api-functions-sidebars.php';
